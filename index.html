@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>1주차 자료구조 활동 보고서 -20181031</title>
+  </head>
+  <body>
+    <header>
+      <h1>1주차: 시간 복잡도에 대한 활동</h1>
+      <h2>20181031 이창진</h2>
+    </header>
+    <main>
+      <header>
+        <ul class="index__list">
+          <li class="index">
+            <span class="index_big">1.개요:</span>
+            <ul class="index_small">
+              <li><span>1-1.알고리즘의 정의</span></li>
+              <li><span>1-2.알고리즘의 속도를 측정하는 방법</span></li>
+            </ul>
+          </li>
+          <li class="index_big">
+            <span class="index_big">2.실험</span>
+            <ul class="index_small">
+              <li><span>2-1.예제코드</span></li>
+              <li><span>2-2.각 코드별 알고리즘 복잡도 및 예상 그래프</span></li>
+              <li><span>2-3.각 코드별 소요시간</span></li>
+              <li><span>2-3.결론</span></li>
+            </ul>
+          </li>
+          <li class="index_big">
+            <span class="index_big">3.느낀 점</span>
+          </li>
+        </ul>
+      </header>
+      <div class="p_index">
+        <h2 class="p_index_title">1.개요</h2>
+        <h3 class="p_index_title_sub">1-1.알고리즘의 정의</h3>
+        <p>
+            컴퓨터의 거대하고 방대한 데이터의 문제를 해결하기 위해, 다양한
+            방법을 사용한다. 그것을 우리는 알고리즘이라고 그 과정 속에서
+            데이터가 변환되는 과정을 자료구조라고 일컫는다.
+          </p> 
+    
+    
+        <h3 class="p_index_title">1-2.알고리즘의 속도를 측정하는 방법</h3>
+        <p>알고리즘을 측정하는 방법엔 크게 두가지가 있다.
+            <ul class="list">
+                <li>실행시간 측정법:직접 소스코드를 구현하여 걸리는 시간을 측정하는 방법</li>
+                <li>알고리즘 복잡도 분석:직접 구현하지 않고 수학적 계산을 통해 유추하는 방법(시간복잡도와 공간복잡도 등이 있음)</li>
+            </ul>
+          전자의 경우와 후자의 경우(시간복잡도)를 예시를 통해 분석하여, 두 방법이 공통된 결과를 나타내는지를 실험한다.
+        </p>  
+       
+        </div>
+      <div class="p_index">
+        <h2 class="p_index_title">2.실험</h2>
+
+        <h3 class="p_index_title_sub">2-1.예제코드</h3>
+        <p>
+            실험대상:n을 n번 더하는 계산. (단, for루프 제어연산은 고려하지 않고, 컴퓨터 성능으로 인해 어지간한 계산은 차이가 잘 나지 않으니, 한번 연산 당 변수의 값을 올림(변수 second)) 
+            <ul class="source_code">
+                <li>
+                    <h3>1.n*n</h3>
+                    <div style="background:#0c1021;color:#f8f8f8; height:140px;">
+                        <span style="color:#fbde2d">void</span>
+                        <span style="color:#ff6400">first case(int randomNumber)</span>
+                        {
+                        <div style="margin-left: 20px;">
+                            int second=0;
+                        </div>
+                        <div style="margin-left: 20px;">
+                            int sum=randomNumber*randomNumber;
+                        </div>
+                        <div style="margin-left: 20px;">
+                            second++;
+                        </div>
+                        <div style="margin-left: 20px;">
+                            std::cout<<(sum);
+                        </div>
+                        <div style="margin-left: 20px;">
+                            std::cout<<(second);
+                        </div>
+                        <div>
+                        }
+                        </div>
+                   
+                    </div>
+                </li>
+                <li>
+                    <h3>2.n을 반복문을 통해 n번 더함</h3>
+                    <div style="background:#0c1021;color:#f8f8f8; height:190px;">
+                        <span style="color:#fbde2d">void</span>
+                        <span style="color:#ff6400">secondcase(int randomNumber)</span>
+                        {
+                        <div style="margin-left: 20px;">
+                            int sum=0;
+                        </div>
+                        <div style="margin-left: 20px;">
+                            int second=0;
+                        </div>
+                        <div style="margin-left: 20px;">
+                            for(int i=0;i<span><</span>randomnumber;i++){
+                        </div>
+                        <div style="margin-left: 40px;">
+                        </div>
+                        <div style="margin-left: 40px;">
+                            sum+=randomNumber;
+                        </div>
+                        <div style="margin-left: 40px;">
+                          
+                            second++;
+                        </div>
+                        <div style="margin-left: 20px;">
+                        }
+                        </div>
+                        <div style="margin-left: 20px;">
+                            std::cout<<(sum);
+                        </div>
+                        <div style="margin-left: 20px;">
+                            std::cout<<(second);
+                        </div>
+                        <div>
+                        }
+                        </div>
+                   
+                    </div>
+                </li>
+                <li>
+                    <h3>3.n을 이중반복문을 통해 1씩 증가시킴</h3>
+                    <div style="background:#0c1021;color:#f8f8f8; height:230px;">
+                        <span style="color:#fbde2d">void</span>
+                        <span style="color:#ff6400">thirdCase(int randomNumber)</span>
+                        {
+                        <div style="margin-left: 20px;">
+                            int sum=randomNumber*randomNumber;
+                        </div>
+                        <div style="margin-left: 20px;">
+                            int second=0;
+                        </div>
+                        <div style="margin-left: 20px;">
+                            for(int i=0;i<span><</span>randomnumber;i++){
+                        </div>
+                        <div style="margin-left: 40px;">
+                            for(int j=0;j<span><</span>randomnumber;j++){
+                        </div>
+                        <div style="margin-left: 40px;">
+                        </div>
+                        <div style="margin-left: 60px;">
+                            sum++;
+                        </div>
+                        <div style="margin-left: 60px;">
+                          
+                            second++;
+                        </div>
+                        <div style="margin-left: 40px;">
+                        }
+                        </div>
+                        <div style="margin-left: 20px;">
+                        }
+                        </div>
+                        <div style="margin-left: 20px;">
+                            std::cout<<(sum);
+                        </div>
+                        <div style="margin-left: 20px;">
+                            std::cout<<(second);
+                        </div>
+                        <div>
+                        }
+                        </div>
+                   
+                    </div>
+                </li>
+            </ul>
+        </p>
+    </div>
+    </main>
+  </body>
+</html>
