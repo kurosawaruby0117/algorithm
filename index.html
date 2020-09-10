@@ -5,7 +5,7 @@
     <title>1주차 자료구조 활동 보고서 -20181031</title>
   </head>
   <body>
-    <header>
+    <header class="myInfo">
       <h1>1주차: 시간 복잡도에 대한 활동</h1>
       <h2>20181031 이창진</h2>
     </header>
@@ -55,13 +55,14 @@
         </div>
       <div class="p_index">
         <h2 class="p_index_title">2.실험</h2>
-
+        
         <h3 class="p_index_title_sub">2-1.예제코드</h3>
+        <h5><a href="https://repl.it/@GoldenRuby/AuthorizedHoarseConditions#main.cpp">예제코드 보기</a></h5>
         <p>
-            실험대상:n을 n번 더하는 계산. (단, for루프 제어연산은 고려하지 않고, 컴퓨터 성능으로 인해 어지간한 계산은 차이가 잘 나지 않으니, 한번 연산 당 변수의 값을 올림(변수 second)) 
+            실험대상:n을 n번 더하는 계산. (단, for루프 제어연산과 대입연산은 고려하지 않고, 컴퓨터 성능으로 인해 어지간한 계산은 차이가 잘 나지 않으니, 한번 연산 당 변수의 값을 올림(변수 second)) 
             <ul class="source_code">
                 <li>
-                    <h3>1.n*n</h3>
+                    <h4>1.n*n</h4>
                     <div style="background:#0c1021;color:#f8f8f8; height:140px;">
                         <span style="color:#fbde2d">void</span>
                         <span style="color:#ff6400">first case(int randomNumber)</span>
@@ -88,7 +89,7 @@
                     </div>
                 </li>
                 <li>
-                    <h3>2.n을 반복문을 통해 n번 더함</h3>
+                    <h4>2.n을 반복문을 통해 n번 더함</h4>
                     <div style="background:#0c1021;color:#f8f8f8; height:190px;">
                         <span style="color:#fbde2d">void</span>
                         <span style="color:#ff6400">secondcase(int randomNumber)</span>
@@ -127,7 +128,7 @@
                     </div>
                 </li>
                 <li>
-                    <h3>3.n을 이중반복문을 통해 1씩 증가시킴</h3>
+                    <h4>3.n을 이중반복문을 통해 1씩 증가시킴</h4>
                     <div style="background:#0c1021;color:#f8f8f8; height:230px;">
                         <span style="color:#fbde2d">void</span>
                         <span style="color:#ff6400">thirdCase(int randomNumber)</span>
@@ -173,6 +174,45 @@
                 </li>
             </ul>
         </p>
+        <h3>2.2각 코드별 알고리즘 복잡도 및 예상 그래프</h3>
+        <h5><a href="https://www.desmos.com/calculator/sutazathyn">그래프 보기</a></h5>
+            <ul class="code_complex">
+                <li>
+                    <h4>첫번째 경우</h4>
+                    <p>
+                        값의 상관 없이 한번만 연산된다. <strong><span style="color:#adec92">O(1)</span></strong>
+                    </p>
+                    <img src="img/oone.png" style="width: 600px; height: 300px;">
+                </li>
+                <li>
+                    <h4>두번째 경우</h4>
+                    <p>
+                        값의 크기만큼 반복문이 돌며 연산된다. <strong><span style="color:#000080">O(n)</span></strong>
+                    </p>
+                    <img src="img/on.png" style="width: 600px; height: 300px;">
+                </li>
+                <li>
+                    <h4>세번째 경우</h4>
+                    <p>
+                        값의 제곱 크기만큼 반복문이 돌며 연산된다. <strong><span style="color:#f76865">O(n^2)</span></strong>
+                    </p>
+                    <img src="img/osqrt.png" style="width: 600px; height: 300px;">
+                </li>
+                <li>
+                    <h4>전체 보기</h4>
+                    <img src="img/all.png" style="width: 600px; height: 300px;">
+                </li>
+                
+            </ul>
+            <h3>2.3각 코드별 소요시간</h3>
+            <ul class="code_complex">
+                <li>
+                    <h4>파이썬으로 엑셀 입력 프로그램을 통해 값 액셀에 저장</h4>
+                    <h5><a href="https://repl.it/@GoldenRuby/AdorableSurefootedAggregators#main.py">파이썬 코드 보기</a></h5>
+                    <a href="/source/spenttime.csv" download="howmuchspend">CSV 파일 다운로드</a>
+                    <img src="img/excel.png" style="width: 1000px; height: 500px;">
+                </li>
+            </ul>
     </div>
     </main>
   </body>
